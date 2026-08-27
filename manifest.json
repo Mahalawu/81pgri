@@ -19,8 +19,8 @@
   "theme_color": "#f51a1a",
   "icons": [
     {
-      "src": "https://mahalawu.github.io/81pgri/logopgri.png",
-      "sizes": "224x224",
+      "src": "https://mahalawu.github.io/81pgri/logopgri512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
