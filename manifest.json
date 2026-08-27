@@ -1,0 +1,72 @@
+{
+  "id": "/81pgri/index.html",
+  "name": "Aplikasi Shopping Chart PGRI",
+  "short_name": "PGRI Cab. Sine",
+  "start_url": "/81pgri/",
+  "scope": "/81pgri/",
+  "scope_extensions": [
+    { "origin": "https://*.github.io" },
+    { "origin": "https://mahalawu.github.io" }
+  ],  
+  "display": "standalone",
+  "display_override": [
+  "window-controls-overlay",
+  "standalone",
+  "browser"
+],
+  "orientation": "any",
+  "background_color": "#1d4ed8",
+  "theme_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "https://mahalawu.github.io/wifiapp/assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+        {
+      "src": "https://mahalawu.github.io/wifiapp/assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "description": "Aplikasi shopping chart pemesanan kaos seragam HUT ke-81 PGRI Cabang Sine.",
+  "lang": "id",
+  "categories": [
+    "business",
+    "finance",
+    "network",
+    "networking"
+  ],
+  "screenshots": [
+    {
+      "src": "https://mahalawu.github.io/wifiapp/assets/scr1.png",
+      "sizes": "512x1052",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Halaman Produk"
+    },
+    {
+      "src": "https://mahalawu.github.io/wifiapp/assets/scr3.png",
+      "sizes": "512x962",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Halaman Client Dalam"
+    },
+    {
+    "src": "https://mahalawu.github.io/wifiapp/assets/scr4.png",
+      "sizes": "512x1052",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Halaman Admin Depan"
+    },
+    {
+    "src": "https://mahalawu.github.io/wifiapp/assets/desktop.PNG",
+      "sizes": "1584x749",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Tampilan Halaman Depan Desktop"
+    }    
+  ]
+}
