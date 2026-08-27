@@ -2,7 +2,6 @@ const CACHE_NAME = 'Shopping Chart V. 2 PGRI';
 const urlsToCache = [
   './',
   './index.html',
-  './script.js',
   './manifest.json',
   './80pgri.png',
   './logopgri.png'
