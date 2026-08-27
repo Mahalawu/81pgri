@@ -1,38 +1,72 @@
 {
-  "background_color": "#f51a1a",
-  "dir": "ltr",
-  "display": "standalone",
-  "name": "mahalawu.github",
-  "orientation": "any",
+  "id": "/81pgri/index.html",
+  "name": "Aplikasi Shopping Chart PGRI",
+  "short_name": "PGRI Cab. Sine",
+  "start_url": "/81pgri/",
   "scope": "/81pgri/",
-  "short_name": "mahalawu.github",
-  "start_url": "/index.html",
+  "scope_extensions": [
+    { "origin": "https://*.github.io" },
+    { "origin": "https://mahalawu.github.io" }
+  ],  
+  "display": "standalone",
+  "display_override": [
+  "window-controls-overlay",
+  "standalone",
+  "browser"
+],
+  "orientation": "any",
+  "background_color": "#f51a1a",
   "theme_color": "#f51a1a",
   "icons": [
     {
-      "src": "https://mahalawu.github.io/81pgri/logopgri.png",
+      "src": "https://mahalawu.github.io/81pgri/80pgri.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "224x224",
-      "isSquare": true,
-      "isPng": true,
-      "isWebp": false,
-      "isJpg": false,
-      "width": 224,
-      "is512x512": false,
-      "is256x256": false,
-      "is192x192": false
+      "purpose": "any"
+    },
+        {
+      "src": "https://mahalawu.github.io/81pgri/80pgri.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
+  "description": "Aplikasi shopping chart pemesanan kaos seragam HUT ke-81 PGRI Cabang Sine.",
   "lang": "id",
-  "prefer_related_applications": false,
   "categories": [
     "business",
-    "education",
-    "fashion",
+    "finance",
     "network",
-    "networking",
-    "shopping",
-    "social",
-    "social networking"
+    "networking"
+  ],
+  "screenshots": [
+    {
+      "src": "https://mahalawu.github.io/81pgri/80pgri.png",
+      "sizes": "512x1052",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Halaman Produk"
+    },
+    {
+      "src": "https://mahalawu.github.io/81pgri/80pgri.png",
+      "sizes": "512x962",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Halaman Client Dalam"
+    },
+    {
+    "src": "https://mahalawu.github.io/81pgri/80pgri.png",
+      "sizes": "512x1052",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Halaman Admin Depan"
+    },
+    {
+    "src": "https://mahalawu.github.io/81pgri/80pgri.png",
+      "sizes": "1584x749",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Tampilan Halaman Depan Desktop"
+    }    
   ]
 }
