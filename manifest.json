@@ -22,7 +22,7 @@
       "src": "https://mahalawu.github.io/81pgri/logopgri512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any"
     },
         {
       "src": "https://mahalawu.github.io/81pgri/logopgri192.png",
