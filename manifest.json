@@ -19,13 +19,13 @@
   "theme_color": "#1e3a8a",
   "icons": [
     {
-      "src": "https://mahalawu.github.io/wifiapp/assets/logo.png",
+      "src": "https://mahalawu.github.io/81pgri/80pgri.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
         {
-      "src": "https://mahalawu.github.io/wifiapp/assets/logo.png",
+      "src": "https://mahalawu.github.io/81pgri/80pgri.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -41,28 +41,28 @@
   ],
   "screenshots": [
     {
-      "src": "https://mahalawu.github.io/wifiapp/assets/scr1.png",
+      "src": "https://mahalawu.github.io/81pgri/80pgri.png",
       "sizes": "512x1052",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Halaman Produk"
     },
     {
-      "src": "https://mahalawu.github.io/wifiapp/assets/scr3.png",
+      "src": "https://mahalawu.github.io/81pgri/80pgri.png",
       "sizes": "512x962",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Halaman Client Dalam"
     },
     {
-    "src": "https://mahalawu.github.io/wifiapp/assets/scr4.png",
+    "src": "https://mahalawu.github.io/81pgri/80pgri.png",
       "sizes": "512x1052",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Halaman Admin Depan"
     },
     {
-    "src": "https://mahalawu.github.io/wifiapp/assets/desktop.PNG",
+    "src": "https://mahalawu.github.io/81pgri/80pgri.png",
       "sizes": "1584x749",
       "type": "image/png",
       "form_factor": "wide",
