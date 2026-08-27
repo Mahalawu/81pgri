@@ -20,13 +20,13 @@
   "icons": [
     {
       "src": "https://mahalawu.github.io/81pgri/80pgri.png",
-      "sizes": "512x512",
+      "sizes": "312x262",
       "type": "image/png",
       "purpose": "any"
     },
         {
       "src": "https://mahalawu.github.io/81pgri/80pgri.png",
-      "sizes": "512x512",
+      "sizes": "312x262",
       "type": "image/png",
       "purpose": "maskable"
     }
