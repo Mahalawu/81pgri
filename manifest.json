@@ -19,16 +19,16 @@
   "theme_color": "#f51a1a",
   "icons": [
     {
-      "src": "https://mahalawu.github.io/81pgri/80pgri.png",
-      "sizes": "312x262",
-      "type": "image/png",
-      "purpose": "any"
-    },
-        {
       "src": "https://mahalawu.github.io/81pgri/logopgri.png",
-      "sizes": "192x192",
+      "sizes": "224x224",
       "type": "image/png",
       "purpose": "maskable"
+    },
+        {
+      "src": "https://mahalawu.github.io/81pgri/logopgri192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
     }
   ],
   "description": "Aplikasi shopping chart pemesanan kaos seragam HUT ke-81 PGRI Cabang Sine.",
