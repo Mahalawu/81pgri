@@ -4,16 +4,12 @@
   "short_name": "81th PGRI Sine",
   "start_url": "/81pgri/",
   "scope": "/81pgri/",
-  "scope_extensions": [
-    { "origin": "https://*.github.io" },
-    { "origin": "https://mahalawu.github.io" }
-  ],  
   "display": "standalone",
   "display_override": [
-  "window-controls-overlay",
-  "standalone",
-  "browser"
-],
+    "window-controls-overlay",
+    "standalone",
+    "browser"
+  ],
   "orientation": "any",
   "background_color": "#f51a1a",
   "theme_color": "#f51a1a",
@@ -24,7 +20,7 @@
       "type": "image/png",
       "purpose": "any"
     },
-        {
+    {
       "src": "https://mahalawu.github.io/81pgri/logopgri192.png",
       "sizes": "192x192",
       "type": "image/png",
@@ -55,18 +51,18 @@
       "label": "Halaman Client Dalam"
     },
     {
-    "src": "https://mahalawu.github.io/81pgri/80pgri.png",
+      "src": "https://mahalawu.github.io/81pgri/80pgri.png",
       "sizes": "512x1052",
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Halaman Admin Depan"
     },
     {
-    "src": "https://mahalawu.github.io/81pgri/desktop1918.png",
+      "src": "https://mahalawu.github.io/81pgri/desktop1918.png",
       "sizes": "1918x985",
       "type": "image/png",
       "form_factor": "wide",
       "label": "Tampilan Halaman Depan Desktop"
-    }    
+    }
   ]
 }
