@@ -717,5 +717,54 @@
   <p class="mt-2">Developed by Mahalawu © 2026 All Rights Reserved.</p>
 </div>
 
+  <!-- ============ AUTO-RESIZE IFRAME (UNTUK MODAL) ============ -->
+<script>
+  (function() {
+    // Hanya jalankan kalau halaman ini dimuat di dalam iframe
+    if (window.self === window.top) return;
+
+    function kirimTinggi() {
+      var tinggi = document.body.scrollHeight || document.documentElement.scrollHeight;
+      try {
+        window.parent.postMessage({
+          type: 'resizePanduan',
+          height: tinggi
+        }, '*');
+      } catch (e) {
+        // Diamkan kalau gagal (misal CSP)
+      }
+    }
+
+    // Kirim setelah load
+    window.addEventListener('load', kirimTinggi);
+
+    // Kirim kalau ukuran berubah (resize browser, image load, dsb)
+    window.addEventListener('resize', kirimTinggi);
+
+    // Kirim berkala untuk antisipasi perubahan dinamis (font load, dll)
+    // dan pantau perubahan tinggi dengan ResizeObserver kalau tersedia
+    if (typeof ResizeObserver !== 'undefined') {
+      var lastHeight = 0;
+      var observer = new ResizeObserver(function() {
+        var h = document.body.scrollHeight;
+        if (Math.abs(h - lastHeight) > 4) { // Hanya kirim kalau beda signifikan
+          lastHeight = h;
+          kirimTinggi();
+        }
+      });
+      observer.observe(document.body);
+    } else {
+      // Fallback: pantau tiap 500ms
+      setInterval(kirimTinggi, 500);
+    }
+
+    // Kirim sekali lagi setelah 1 detik (antisipasi late render)
+    setTimeout(kirimTinggi, 1000);
+  })();
+</script>
+
+</body>
+</html>
+
 </body>
 </html>
