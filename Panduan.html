@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panduan Pemesanan - PGRI Sine Store 2026</title>
+  <link rel="icon" type="image/png" href="https://mahalawu.github.io/81pgri/logopgri.png">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --pgri-red: #cc0000;
+      --pgri-red-dark: #800000;
+      --pgri-red-light: #fff5f5;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      color: #212529;
+      line-height: 1.6;
+    }
+
+    /* ============ HEADER ============ */
+    .header-hero {
+      background: linear-gradient(135deg, #cc0000 0%, #800000 100%);
+      color: #fff;
+      padding: 40px 20px 30px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .header-hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .header-hero h1 {
+      font-weight: 800;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+      position: relative;
+      z-index: 1;
+    }
+    .header-hero p {
+      font-size: clamp(0.85rem, 1.5vw, 1rem);
+      opacity: 0.9;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .header-logo {
+      height: 60px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ============ PRINT BUTTON ============ */
+    .print-bar {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 10px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .print-bar .brand {
+      font-weight: 700;
+      color: var(--pgri-red);
+      font-size: 0.9rem;
+    }
+
+    /* ============ SECTION ============ */
+    .content-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
+    }
+
+    .section-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      border-left: 6px solid var(--pgri-red);
+    }
+    .section-card h2 {
+      color: var(--pgri-red);
+      font-weight: 800;
+      font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-card h2 .num-badge {
+      background: var(--pgri-red);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* ============ STEP ITEMS ============ */
+    .step-item {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 22px;
+      padding-bottom: 22px;
+      border-bottom: 1px dashed #e0e0e0;
+    }
+    .step-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .step-num {
+      background: var(--pgri-red-light);
+      color: var(--pgri-red);
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      border: 2px solid var(--pgri-red);
+    }
+    .step-content h5 {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: #212529;
+    }
+    .step-content p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 6px;
+    }
+    .step-content .tip {
+      background: #fffbe6;
+      border-left: 3px solid #ffc107;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      border-radius: 6px;
+      color: #666;
+      margin-top: 8px;
+    }
+    .step-content .tip i {
+      color: #f39c12;
+      margin-right: 4px;
+    }
+
+    /* ============ INFO BOX ============ */
+    .info-box {
+      background: var(--pgri-red-light);
+      border-left: 4px solid var(--pgri-red);
+      padding: 16px 20px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      margin: 15px 0;
+    }
+    .info-box strong {
+      color: var(--pgri-red-dark);
+    }
+    .info-box code {
+      background: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: var(--pgri-red);
+      font-size: 0.85rem;
+      border: 1px solid #f0c0c0;
+    }
+
+    /* ============ FAQ ============ */
+    .faq-item {
+      background: #fafafa;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+      border-left: 3px solid var(--pgri-red);
+    }
+    .faq-item .q {
+      font-weight: 700;
+      color: var(--pgri-red-dark);
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+    .faq-item .a {
+      font-size: 0.88rem;
+      color: #555;
+      margin-bottom: 0;
+    }
+
+    /* ============ ROLE CARDS ============ */
+    .role-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 10px;
+    }
+    @media (max-width: 576px) {
+      .role-cards { grid-template-columns: 1fr; }
+    }
+    .role-card {
+      border-radius: 12px;
+      padding: 20px;
+      color: #fff;
+    }
+    .role-card.admin { background: linear-gradient(135deg, #cc0000, #800000); }
+    .role-card.konveksi { background: linear-gradient(135deg, #f39c12, #b9770e); }
+    .role-card h6 {
+      font-weight: 800;
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+    .role-card ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+      font-size: 0.85rem;
+    }
+    .role-card ul li { margin-bottom: 4px; }
+
+    /* ============ CONTACT BOX ============ */
+    .contact-box {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #fff;
+      border-radius: 16px;
+      padding: 30px 24px;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+    }
+    .contact-box h3 {
+      font-weight: 800;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+    .contact-box p {
+      font-size: 0.9rem;
+      opacity: 0.95;
+      margin-bottom: 18px;
+    }
+    .contact-box a.btn-wa {
+      background: #fff;
+      color: #25D366;
+      font-weight: 700;
+      padding: 12px 26px;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+    .contact-box a.btn-wa:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* ============ TOC (Table of Contents) ============ */
+    .toc {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+      border-top: 4px solid var(--pgri-red);
+    }
+    .toc h3 {
+      font-weight: 800;
+      color: var(--pgri-red);
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+    .toc ol {
+      padding-left: 22px;
+      margin-bottom: 0;
+    }
+    .toc ol li {
+      margin-bottom: 6px;
+      font-size: 0.92rem;
+    }
+    .toc ol li a {
+      color: #212529;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .toc ol li a:hover {
+      color: var(--pgri-red);
+      text-decoration: underline;
+    }
+
+    /* ============ FOOTER ============ */
+    .footer {
+      background: linear-gradient(135deg, #800000, #cc0000);
+      color: #fff;
+      text-align: center;
+      padding: 24px 20px;
+      font-size: 0.82rem;
+      margin-top: 40px;
+    }
+    .footer p { margin-bottom: 4px; opacity: 0.9; }
+
+    /* ============ PRINT STYLES ============ */
+    @media print {
+      body {
+        background: #fff !important;
+        font-size: 11pt;
+      }
+      .print-bar, .no-print {
+        display: none !important;
+      }
+      .header-hero {
+        background: #fff !important;
+        color: #cc0000 !important;
+        padding: 15px 0 !important;
+        border-bottom: 3px solid #cc0000;
+      }
+      .header-hero h1, .header-hero p {
+        color: #cc0000 !important;
+      }
+      .header-logo { height: 50px !important; }
+      .content-wrapper {
+        padding: 10px 0 !important;
+        max-width: 100% !important;
+      }
+      .section-card {
+        box-shadow: none !important;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+        margin-bottom: 12px;
+        padding: 16px;
+      }
+      .section-card h2 {
+        font-size: 13pt !important;
+        page-break-after: avoid;
+      }
+      .step-item {
+        page-break-inside: avoid;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+      }
+      .faq-item {
+        page-break-inside: avoid;
+      }
+      .contact-box {
+        background: #f0f0f0 !important;
+        color: #333 !important;
+        box-shadow: none !important;
+      }
+      .contact-box a.btn-wa {
+        background: #333 !important;
+        color: #fff !important;
+      }
+      .role-cards { page-break-inside: avoid; }
+      .footer {
+        background: #fff !important;
+        color: #666 !important;
+        border-top: 2px solid #cc0000;
+      }
+      @page {
+        margin: 15mm 12mm;
+        size: A4;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ PRINT BAR ============ -->
+<div class="print-bar no-print">
+  <div class="brand">
+    <i class="fa-solid fa-book-open me-1"></i> PANDUAN PENGGUNAAN APLIKASI
+  </div>
+  <div class="d-flex gap-2">
+    <a href="https://mahalawu.github.io/81pgri/" class="btn btn-sm btn-outline-secondary">
+      <i class="fa-solid fa-arrow-left me-1"></i> Kembali ke Toko
+    </a>
+    <button onclick="window.print()" class="btn btn-sm btn-danger fw-bold">
+      <i class="fa-solid fa-print me-1"></i> Print / Save PDF
+    </button>
+  </div>
+</div>
+
+<!-- ============ HEADER HERO ============ -->
+<div class="header-hero">
+  <img src="https://mahalawu.github.io/81pgri/logopgri.png" alt="Logo PGRI" class="header-logo">
+  <h1>PANDUAN PEMESANAN KAOS SERAGAM</h1>
+  <p>PGRI Cabang Kecamatan Sine — HUT ke-81 Tahun 2026</p>
+</div>
+
+<!-- ============ CONTENT ============ -->
+<div class="content-wrapper">
+
+  <!-- TOC -->
+  <div class="toc no-print">
+    <h3><i class="fa-solid fa-list-ul me-2"></i>Daftar Isi</h3>
+    <ol>
+      <li><a href="#pengenalan">Pengenalan Aplikasi</a></li>
+      <li><a href="#alur">Alur Pemesanan (Untuk Pemesan)</a></li>
+      <li><a href="#cek-pesanan">Cara Cek Status Pesanan</a></li>
+      <li><a href="#panduan-admin">Panduan Admin & Operator Konveksi</a></li>
+      <li><a href="#faq">Pertanyaan Umum (FAQ)</a></li>
+      <li><a href="#kontak">Kontak Bantuan</a></li>
+    </ol>
+  </div>
+
+  <!-- ============ BAGIAN 1: PENGENALAN ============ -->
+  <div class="section-card" id="pengenalan">
+    <h2><span class="num-badge">1</span> Pengenalan Aplikasi</h2>
+    
+    <p>
+      <strong>PGRI Sine Store</strong> adalah aplikasi pemesanan kaos seragam 
+      PGRI Cabang Kecamatan Sine dalam rangka menyambut HUT PGRI ke-81 tahun 2026.
+    </p>
+
+    <div class="info-box">
+      <strong><i class="fa-solid fa-circle-info me-1"></i> Akses Aplikasi:</strong><br>
+      <code>https://mahalawu.github.io/81pgri/</code>
+    </div>
+
+    <p class="mb-2"><strong>Fitur utama:</strong></p>
+    <ul style="font-size: 0.9rem; color: #555;">
+      <li>🛒 Pemesanan kaos seragam secara online</li>
+      <li>🎨 Lihat katalog produk dengan rotasi gambar otomatis</li>
+      <li>📦 Pantau status pesanan real-time</li>
+      <li>🗳️ Ikut survei warna seragam favorit</li>
+      <li>📊 Rekapitulasi pesanan transparan</li>
+    </ul>
+
+    <div class="info-box">
+      <strong><i class="fa-solid fa-key me-1"></i> Info Token Keamanan:</strong><br>
+      Setiap pemesanan memerlukan <strong>Token Keamanan</strong> yang dapat diminta 
+      kepada pengurus PGRI Cabang Sine. Token ini berfungsi untuk mencegah pemesanan palsu.
+    </div>
+  </div>
+
+  <!-- ============ BAGIAN 2: ALUR PEMESANAN ============ -->
+  <div class="section-card" id="alur">
+    <h2><span class="num-badge">2</span> Alur Pemesanan</h2>
+    <p class="text-muted small mb-4">
+      Ikuti langkah-langkah berikut untuk memesan kaos seragam PGRI.
+    </p>
+
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h5>Buka Aplikasi</h5>
+        <p>Akses link <code>mahalawu.github.io/81pgri/</code> melalui browser HP atau komputer.</p>
+        <div class="tip"><i class="fa-solid fa-lightbulb"></i> Aplikasi bisa diakses tanpa install, langsung dari browser.</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h5>Pilih Produk Kaos</h5>
+        <p>Lihat katalog produk. Gambar produk akan berganti otomatis setiap 5 detik — 
+        arahkan kursor untuk menghentikan rotasi dan melihat detail.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h5>Atur Ukuran & Jumlah</h5>
+        <p>Pilih ukuran (S, M, L, XL, XXL, XXXL), lalu klik tombol 
+        <strong>+ Keranjang</strong>. Ulangi untuk item lain jika perlu.</p>
+        <div class="tip"><i class="fa-solid fa-lightbulb"></i> Bisa pesan beberapa jenis kaos dengan ukuran berbeda sekaligus.</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h5>Review Keranjang</h5>
+        <p>Klik ikon <strong>Keranjang</strong> di navbar. Periksa rincian item, 
+        ubah jumlah jika perlu, dan pastikan total sudah benar.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h5>Isi Data Pemesan</h5>
+        <p>Klik <strong>Lanjut Checkout</strong>, lalu isi:</p>
+        <ul style="font-size: 0.88rem; color: #555;">
+          <li>Nama Pemesan / Penanggung Jawab</li>
+          <li>Asal Ranting / Sekolah</li>
+          <li>Nomor WhatsApp aktif</li>
+          <li>Jenis pesanan (Mandiri / Kolektif)</li>
+          <li>Metode pembayaran (Transfer / Tunai)</li>
+        </ul>
+        <div class="tip"><i class="fa-solid fa-triangle-exclamation"></i> Nomor WA harus aktif — digunakan untuk konfirmasi pesanan.</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">6</div>
+      <div class="step-content">
+        <h5>Validasi Token & Kirim Pesanan</h5>
+        <p>Masukkan <strong>Token Keamanan</strong> dari pengurus, lalu klik 
+        <strong>Kirim Pesanan</strong>.</p>
+        <div class="tip"><i class="fa-solid fa-lightbulb"></i> Token berbeda untuk setiap event — minta ke pengurus cabang.</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">7</div>
+      <div class="step-content">
+        <h5>Simpan ID Pesanan</h5>
+        <p>Setelah berhasil, aplikasi akan menampilkan <strong>ID Pesanan</strong> 
+        (contoh: <code>PGRISINE-81101</code>).</p>
+        <div class="tip"><i class="fa-solid fa-star"></i> <strong>PENTING:</strong> Catat / screenshot ID ini untuk cek status pesanan nanti.</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">8</div>
+      <div class="step-content">
+        <h5>Konfirmasi Pembayaran via WhatsApp</h5>
+        <p>Setelah pesanan tersimpan, aplikasi akan membuka WhatsApp otomatis 
+        ke nomor admin. Kirim bukti transfer (jika metode Transfer) ke admin.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ BAGIAN 3: CEK PESANAN ============ -->
+  <div class="section-card" id="cek-pesanan">
+    <h2><span class="num-badge">3</span> Cara Cek Status Pesanan</h2>
+
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h5>Buka Menu "Cek Pesanan"</h5>
+        <p>Klik tombol <strong>Cek Pesanan</strong> di navbar atas halaman toko.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h5>Masukkan ID + Nomor WA</h5>
+        <p>Isi <strong>ID Pesanan</strong> (contoh: <code>PGRISINE-81101</code>) 
+        dan <strong>Nomor WhatsApp</strong> yang digunakan saat memesan.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h5>Lihat Hasil</h5>
+        <p>Sistem akan menampilkan:</p>
+        <ul style="font-size: 0.88rem; color: #555;">
+          <li>Status pembayaran (Lunas / Belum Lunas)</li>
+          <li>Status konveksi (Draft / Diproses / Selesai)</li>
+          <li>Rincian item yang dipesan</li>
+          <li>Total tagihan</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <strong><i class="fa-solid fa-circle-exclamation me-1"></i> Lupa ID Pesanan?</strong><br>
+      Hubungi admin via WhatsApp dengan menyebutkan nama lengkap dan ranting asal.
+    </div>
+  </div>
+
+  <!-- ============ BAGIAN 4: ADMIN & KONVEKSI ============ -->
+  <div class="section-card" id="panduan-admin">
+    <h2><span class="num-badge">4</span> Panduan Admin & Operator Konveksi</h2>
+    <p class="text-muted small mb-4">
+      Halaman ini hanya untuk pengurus PGRI yang memiliki akses khusus.
+    </p>
+
+    <h5 class="fw-bold mb-3" style="color: #212529;">
+      <i class="fa-solid fa-lock me-1" style="color: var(--pgri-red);"></i> Cara Login
+    </h5>
+    <ol style="font-size: 0.9rem; color: #555;">
+      <li>Klik tombol <strong>Admin</strong> di navbar toko.</li>
+      <li>Masukkan <strong>PIN / Token</strong> yang diberikan pengurus.</li>
+      <li>Klik <strong>Masuk Dashboard</strong>.</li>
+    </ol>
+
+    <h5 class="fw-bold mb-3 mt-4" style="color: #212529;">
+      <i class="fa-solid fa-users-gear me-1" style="color: var(--pgri-red);"></i> Role & Hak Akses
+    </h5>
+
+    <div class="role-cards">
+      <div class="role-card admin">
+        <h6><i class="fa-solid fa-user-shield me-1"></i> ADMIN</h6>
+        <ul>
+          <li>Akses <strong>Kelola Pesanan</strong></li>
+          <li>Update status bayar (Lunas / Belum)</li>
+          <li>Ubah status konveksi (bebas)</li>
+          <li>Hapus pesanan</li>
+          <li>Akses <strong>Rekap Konveksi</strong></li>
+          <li>Cetak / Save PDF rekap</li>
+        </ul>
+      </div>
+      <div class="role-card konveksi">
+        <h6><i class="fa-solid fa-shirt me-1"></i> OPERATOR KONVEKSI</h6>
+        <ul>
+          <li>Hanya akses <strong>Rekap Konveksi</strong></li>
+          <li>Lihat detail pesanan produksi</li>
+          <li>Update status konveksi <em>hanya maju</em>:<br>
+              Draft → Diproses → Selesai</li>
+          <li>Tidak bisa mundurkan status</li>
+          <li>Cetak / Save PDF rekap</li>
+        </ul>
+      </div>
+    </div>
+
+    <h5 class="fw-bold mb-3 mt-4" style="color: #212529;">
+      <i class="fa-solid fa-list-check me-1" style="color: var(--pgri-red);"></i> Update Status Konveksi
+    </h5>
+    <ol style="font-size: 0.9rem; color: #555;">
+      <li>Buka menu <strong>Rekap Konveksi</strong>.</li>
+      <li>Cari pesanan yang ingin di-update (bisa pakai filter / search).</li>
+      <li>Ubah dropdown di kolom <strong>Status</strong>.</li>
+      <li>Perubahan tersimpan otomatis.</li>
+    </ol>
+
+    <div class="info-box">
+      <strong><i class="fa-solid fa-print me-1"></i> Cetak Rekap:</strong><br>
+      Klik tombol <strong>Cetak / Save PDF</strong> di kanan atas tabel Rekap Konveksi. 
+      Jendela print akan terbuka — pilih "Save as PDF" untuk menyimpan.
+    </div>
+  </div>
+
+  <!-- ============ BAGIAN 5: FAQ ============ -->
+  <div class="section-card" id="faq">
+    <h2><span class="num-badge">5</span> Pertanyaan Umum (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Saya lupa ID Pesanan, bagaimana?</div>
+      <p class="a">Hubungi admin via WhatsApp dengan menyebutkan nama lengkap, ranting/sekolah, dan tanggal pemesanan. Admin akan mencarikan ID-nya.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Bagaimana cara mengubah pesanan saya?</div>
+      <p class="a">Pesanan hanya bisa diubah selama status konveksi masih <strong>Draft</strong> (belum masuk proses produksi). Hubungi admin secepat mungkin jika ada perubahan.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Token keamanan apa itu? Di mana saya mendapatkannya?</div>
+      <p class="a">Token keamanan adalah kode unik yang diberikan oleh pengurus PGRI Cabang Sine untuk memvalidasi pesanan. Token dapat diminta melalui pengurus ranting atau admin WhatsApp.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Kapan pesanan saya bisa diambil?</div>
+      <p class="a">Setelah status konveksi berubah menjadi <strong>Selesai</strong>. Anda bisa cek statusnya lewat menu "Cek Pesanan" di aplikasi.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Apakah bisa pesan kolektif untuk satu sekolah?</div>
+      <p class="a">Bisa. Saat checkout, pilih jenis pesanan <strong>Kolektif</strong> dan isi nama ranting/sekolah. Untuk jumlah besar, disarankan koordinasi dulu dengan admin.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Bagaimana jika saya tidak sengaja memesan dua kali?</div>
+      <p class="a">Aplikasi akan menampilkan peringatan jika terdeteksi pesanan ganda untuk ranting yang sama. Namun jika tetap terjadi, hubungi admin untuk penghapusan salah satu pesanan.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Metode pembayaran apa saja yang tersedia?</div>
+      <p class="a">Dua metode: <strong>Transfer Bank</strong> (via BPD Jatim) atau <strong>Tunai / Offline</strong> (setor langsung ke Sdr. Nur Cahyo Widodo di Korwil Sine).</p>
+    </div>
+  </div>
+
+  <!-- ============ BAGIAN 6: KONTAK ============ -->
+  <div class="contact-box" id="kontak">
+    <h3><i class="fa-brands fa-whatsapp me-2"></i>Butuh Bantuan?</h3>
+    <p>
+      Jika ada pertanyaan atau kendala, hubungi admin kami melalui WhatsApp.<br>
+      Respon cepat di jam kerja: <strong>07.00 – 21.00 WIB</strong>
+    </p>
+    <a href="https://wa.me/6282235309711?text=Halo%20Admin%20PGRI%20Sine%2C%20saya%20ingin%20bertanya%20tentang%20pemesanan%20kaos%20seragam." 
+       target="_blank" 
+       class="btn-wa">
+      <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i>
+      Hubungi Admin Sekarang
+    </a>
+  </div>
+
+</div>
+
+<!-- ============ FOOTER ============ -->
+<div class="footer">
+  <p class="fw-bold mb-1">PGRI CABANG KECAMATAN SINE</p>
+  <p>Shopping Chart V. 2.0 — Panduan Pengguna</p>
+  <p class="mt-2">Developed by Mahalawu © 2026 All Rights Reserved.</p>
+</div>
+
+</body>
+</html>
