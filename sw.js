@@ -4,7 +4,7 @@
    ============================================ */
 
 const CACHE_NAME = 'Shopping Chart V. 2 PGRI';
-const CACHE_VERSION = 'v4';                             // ⬅️ Naikkan angka ini tiap kali update sw.js
+const CACHE_VERSION = 'v5';                             // ⬅️ Naikkan angka ini tiap kali update sw.js
 const CACHE_FULL_NAME = CACHE_NAME + '-' + CACHE_VERSION;
 
 // OPSI A: File yang wajib di-cache saat install (untuk fallback offline)
