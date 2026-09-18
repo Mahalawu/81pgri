@@ -398,7 +398,6 @@
     <i class="fa-solid fa-book-open me-1"></i> PANDUAN PENGGUNAAN APLIKASI
   </div>
   <div class="d-flex gap-2">
-
     <button onclick="window.print()" class="btn btn-sm btn-danger fw-bold">
       <i class="fa-solid fa-print me-1"></i> Print / Save PDF
     </button>
@@ -423,6 +422,7 @@
       <li><a href="#alur">Alur Pemesanan (Untuk Pemesan)</a></li>
       <li><a href="#cek-pesanan">Cara Cek Status Pesanan</a></li>
       <li><a href="#panduan-admin">Panduan Admin & Operator Konveksi</a></li>
+      <li><a href="#survey-warna">Panduan Mengikuti Survei Warna</a></li>
       <li><a href="#faq">Pertanyaan Umum (FAQ)</a></li>
       <li><a href="#kontak">Kontak Bantuan</a></li>
     </ol>
@@ -652,9 +652,127 @@
     </div>
   </div>
 
-  <!-- ============ BAGIAN 5: FAQ ============ -->
+  <!-- ============ BAGIAN 5: SURVEI WARNA ============ -->
+  <div class="section-card" id="survey-warna">
+    <h2><span class="num-badge">5</span> Panduan Mengikuti Survei Warna</h2>
+    
+    <p>
+      <strong>Survei Warna</strong> adalah fitur di aplikasi ini untuk mengumpulkan 
+      aspirasi anggota PGRI Cabang Sine mengenai warna kaos seragam yang diinginkan. 
+      Hasil survei akan menjadi referensi bagi pengurus dalam memutuskan warna final.
+    </p>
+
+    <div class="info-box">
+      <strong><i class="fa-solid fa-shield-halved me-1"></i> Perhatian:</strong><br>
+      Survei ini memerlukan <strong>Token Keamanan</strong> — sama dengan token yang 
+      dipakai untuk pemesanan kaos. Hal ini untuk mencegah pengisian survei oleh 
+      pihak yang tidak bertanggung jawab.
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h5>Buka Fitur Survei</h5>
+        <p>Di halaman toko, klik tombol floating <strong>🗳️ Survei Warna</strong> 
+        yang ada di kanan bawah layar.</p>
+        <div class="tip"><i class="fa-solid fa-lightbulb"></i> Tombol berbentuk pill merah dan posisinya di atas tombol WhatsApp.</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h5>Isi Data Diri</h5>
+        <p>Lengkapi form survei dengan:</p>
+        <ul style="font-size: 0.88rem; color: #555;">
+          <li>Nama Lengkap</li>
+          <li>Asal Ranting / Sekolah</li>
+        </ul>
+        <div class="tip"><i class="fa-solid fa-circle-info"></i> Data ini untuk keperluan rekap, bukan untuk ditampilkan ke publik.</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h5>Pilih Warna Favorit</h5>
+        <p>Pilih <strong>satu warna favorit</strong> dari 6 opsi:</p>
+        <ul style="font-size: 0.88rem; color: #555;">
+          <li>🟢 Hijau Army (Klasik)</li>
+          <li>🔴 Merah Cabai (Ceria)</li>
+          <li>⚫ Hitam Polos (Wibawa)</li>
+          <li>🔵 Biru Dongker (Profesional)</li>
+          <li>⚪ Abu-abu (Simpel)</li>
+          <li>🟡 Krem Pasir (Elegan)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h5>Masukkan Token Keamanan</h5>
+        <p>Masukkan <strong>Token Keamanan</strong> — sama seperti token yang dipakai untuk 
+        memesan kaos. Token dapat diminta kepada pengurus PGRI Cabang Sine.</p>
+        <div class="tip"><i class="fa-solid fa-triangle-exclamation"></i> Token <strong>Admin</strong> & <strong>Konveksi</strong> tidak bisa dipakai untuk survei.</div>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">5</div>
+      <div class="step-content">
+        <h5>Kirim & Lihat Hasil Real-Time</h5>
+        <p>Klik <strong>Kirim Pilihan Saya</strong>. Setelah berhasil, chart hasil survei 
+        akan ter-update secara <strong>real-time</strong>.</p>
+      </div>
+    </div>
+
+    <h5 class="fw-bold mb-3 mt-4" style="color: #212529;">
+      <i class="fa-solid fa-chart-pie me-1" style="color: var(--pgri-red);"></i> Melihat Hasil Survei
+    </h5>
+    <p style="font-size: 0.9rem; color: #555;">
+      Hasil survei ditampilkan dalam bentuk <strong>doughnut chart</strong> di sebelah kanan 
+      form survei. Anda dapat membuka halaman survei kapan saja untuk melihat 
+      progres & total partisipan terbaru.
+    </p>
+
+    <div class="info-box">
+      <strong><i class="fa-solid fa-circle-info me-1"></i> Yang tampil di hasil survei:</strong><br>
+      <ul class="mb-0 ps-3 mt-1" style="font-size: 0.85rem;">
+        <li>Total jumlah partisipan</li>
+        <li>Perolehan suara tiap warna (jumlah)</li>
+        <li>Proporsi visual tiap warna (chart)</li>
+      </ul>
+    </div>
+
+    <h5 class="fw-bold mb-3 mt-4" style="color: #212529;">
+      <i class="fa-solid fa-circle-question me-1" style="color: var(--pgri-red);"></i> Tanya Jawab Survei
+    </h5>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Kenapa survei memerlukan token?</div>
+      <p class="a">Agar hanya anggota PGRI Cabang Sine yang bisa memberikan suara, dan mencegah pengisian ganda oleh pihak luar.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Di mana saya bisa mendapatkan token?</div>
+      <p class="a">Token dapat diminta kepada pengurus PGRI Cabang Sine, baik secara langsung maupun melalui admin WhatsApp.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Apakah suara saya bisa dilihat orang lain?</div>
+      <p class="a">Tidak. Yang ditampilkan hanya total perolehan suara tiap warna. Data individu tidak dipublikasikan.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Apakah bisa mengubah pilihan warna?</div>
+      <p class="a">Bisa, dengan cara submit ulang survei. Namun mohon digunakan dengan bijak, agar tidak mengganggu hasil rekap.</p>
+    </div>
+  </div>
+
+  <!-- ============ BAGIAN 6: FAQ ============ -->
   <div class="section-card" id="faq">
-    <h2><span class="num-badge">5</span> Pertanyaan Umum (FAQ)</h2>
+    <h2><span class="num-badge">6</span> Pertanyaan Umum (FAQ)</h2>
 
     <div class="faq-item">
       <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Saya lupa ID Pesanan, bagaimana?</div>
@@ -690,9 +808,19 @@
       <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Metode pembayaran apa saja yang tersedia?</div>
       <p class="a">Dua metode: <strong>Transfer Bank</strong> (via BPD Jatim) atau <strong>Tunai / Offline</strong> (setor langsung ke Sdr. Nur Cahyo Widodo di Korwil Sine).</p>
     </div>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Bagaimana cara ikut survei warna?</div>
+      <p class="a">Buka halaman toko, klik tombol <strong>🗳️ Survei Warna</strong> di kanan bawah, isi data diri, pilih warna, dan masukkan token keamanan. Panduan lengkapnya ada di bagian <a href="#survey-warna" style="color: var(--pgri-red);">Panduan Mengikuti Survei Warna</a>.</p>
+    </div>
+
+    <div class="faq-item">
+      <div class="q"><i class="fa-solid fa-circle-question me-1"></i> Token saya tidak bisa untuk survei, kenapa?</div>
+      <p class="a">Pastikan Anda menggunakan <strong>token pemesanan</strong> (bukan token Admin atau Konveksi). Token Admin & Konveksi memang dibatasi hanya untuk login dashboard, tidak bisa dipakai untuk survei maupun pemesanan.</p>
+    </div>
   </div>
 
-  <!-- ============ BAGIAN 6: KONTAK ============ -->
+  <!-- ============ BAGIAN 7: KONTAK ============ -->
   <div class="contact-box" id="kontak">
     <h3><i class="fa-brands fa-whatsapp me-2"></i>Butuh Bantuan?</h3>
     <p>
