@@ -13,7 +13,7 @@ const urlsToCache = [
   './index.html',
   './Panduan.html',
   './manifest.json',
-  './80pgri.png',
+  './81pgri.png',
   './logopgri.png'
 ];
 
